@@ -75,16 +75,16 @@
     // console.log(toatalYears)
 
     // instead of above, use .reduce()
-    const toatalYears = inventors.reduce((total, inventor) => {
+    const totalYears = inventors.reduce((total, inventor) => {
       return total + (inventor.passed - inventor.year)
     }, 0);
 
-    // console.log(toatalYears)
+    // console.log(totalYears)
 
     // 5. Sort the inventors by years lived
     const oldest = inventors.sort((a, b) => {
       const lastGuy = a.passed - a.year;
-      const nextGuy = b.passed = b.year;
+      const nextGuy = b.passed - b.year;
 
       return lastGuy > nextGuy ? -1 : 1;
     });
